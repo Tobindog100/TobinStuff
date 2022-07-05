@@ -1,0 +1,3 @@
+displayName = Tobin's Cool Stuff
+author = I Dunno
+version = 0.5
