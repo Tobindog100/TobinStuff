@@ -15,7 +15,7 @@ namespace TobinStuff.Items
 		public override void SetDefaults()
 		{
 			Item.damage = 64;
-			Item.DamageType = DamageClass.Magic;
+			Item.DamageType = DamageClass.Melee;
 			Item.width = 40;
 			Item.height = 40;
 			Item.useTime = 20;
