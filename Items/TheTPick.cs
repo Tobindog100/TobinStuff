@@ -18,10 +18,10 @@ namespace TobinStuff.Items
 		public override void SetDefaults()
 		{
 			Item.damage = 1;
-			Item.DamageType = DamageClass.None;
+			Item.DamageType = DamageClass.Melee;
 			Item.width = 40;
 			Item.height = 40;
-			Item.useTime = 25;
+			Item.useTime = 5;
 			Item.useAnimation = 10;
 			Item.useStyle = ItemUseStyleID.Swing;
 			Item.knockBack = 6;
