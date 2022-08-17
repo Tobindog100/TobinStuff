@@ -3,7 +3,8 @@ using Terraria.GameContent.Creative;
 using Terraria.ModLoader;
 
 namespace TobinStuff.Items
-	public class ExampleMagicWeapon : ModItem
+{ 
+	public class Squirrellium_Staff : ModItem
 	{
 		public override void SetStaticDefaults()
 		{
@@ -14,7 +15,7 @@ namespace TobinStuff.Items
 
 		public override void SetDefaults()
 		{
-			Item.damage = 25;
+			Item.damage = 30;
 			Item.DamageType = DamageClass.Magic; // Makes the damage register as magic. If your item does not have any damage type, it becomes true damage (which means that damage scalars will not affect it). Be sure to have a damage type.
 			Item.width = 34;
 			Item.height = 40;
@@ -27,8 +28,8 @@ namespace TobinStuff.Items
 			Item.rare = ItemRarityID.LightRed;
 			Item.UseSound = SoundID.Item71;
 			Item.autoReuse = true;
-			Item.shoot = ProjectileID.MagicMissile; // Shoot a black bolt, also known as the projectile shot from the onyx blaster.
-			Item.shootSpeed = 7; // How fast the item shoots the projectile.
+			Item.shoot = ProjectileID.DiamondBolt; // Shoot a (Itm Here), also known as the projectile shot from (I Dunno).
+			Item.shootSpeed = 10; // How fast the item shoots the projectile.
 			Item.crit = 32; // The percent chance at hitting an enemy with a crit, plus the default amount of 4.
 			Item.mana = 11; // This is how much mana the item uses.
 		}
@@ -41,6 +42,8 @@ namespace TobinStuff.Items
 				.AddTile<Tiles.Furniture.ExampleWorkbench>()
 				.Register();
 			*/
+
+
 		}
 	}
 }
