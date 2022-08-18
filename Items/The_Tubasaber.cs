@@ -14,7 +14,7 @@ namespace TobinStuff.Items
 
 		public override void SetDefaults()
 		{
-			Item.damage = 64;
+			Item.damage = 50;
 			Item.DamageType = DamageClass.Magic;
 			Item.width = 40;
 			Item.height = 40;
@@ -32,7 +32,9 @@ namespace TobinStuff.Items
 		public override void AddRecipes()
 		{
 			CreateRecipe()
-				.AddIngredient(ItemID.GemSquirrelAmethyst, 5)
+				//.AddIngredient<Items.Weapons.ExampleSword>()
+				.AddIngredient<Items.Squirrellium>(7)
+//				.AddIngredient(this, "Squirrellium");
 				.Register();
 		}
 		}

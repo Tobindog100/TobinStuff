@@ -30,7 +30,7 @@ namespace TobinStuff.Items
 			Item.UseSound = SoundID.Item1;
 			Item.autoReuse = true;
 
-			Item.pick = 200; // How strong the pickaxe is, see https://terraria.gamepedia.com/Pickaxe_power for a list of common values
+			Item.pick = 172; // How strong the pickaxe is, see https://terraria.gamepedia.com/Pickaxe_power for a list of common values
 		}
 
 		public override void MeleeEffects(Player player, Rectangle hitbox)
