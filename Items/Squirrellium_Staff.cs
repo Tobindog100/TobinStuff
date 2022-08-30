@@ -31,7 +31,7 @@ namespace TobinStuff.Items
 			Item.shoot = ProjectileID.DiamondBolt; // Shoots a Diamond Bolt, also known as the projectile shot from Diamond Staff.
 			Item.shootSpeed = 10; // How fast the item shoots the projectile.
 			Item.crit = 32; // The percent chance at hitting an enemy with a crit, plus the default amount of 4.
-			Item.mana = 11; // This is how much mana the item uses.
+			Item.mana = 10; // This is how much mana the item uses.
 		}
 
 		// Please see Content/ExampleRecipes.cs for a detailed explanation of recipe creation.
@@ -41,6 +41,7 @@ namespace TobinStuff.Items
 				.AddIngredient(ItemID.DiamondStaff, 1)
 				//.AddTile<Tiles.Furniture.Workbench>()
 				.AddIngredient<Items.Squirrellium>(7)
+				.AddCondition(Recipe.Condition.TimeDay)
 				.Register();
 			
 

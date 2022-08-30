@@ -13,7 +13,7 @@ namespace TobinStuff.Items
 	{
 		public override void SetStaticDefaults()
 		{
-			Tooltip.SetDefault("The bar for the Squirrellium set"); // The (English) text shown below your item's name
+			Tooltip.SetDefault("The Ingot for the Squirrellium set"); // The (English) text shown below your item's name
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 500; // How many items are needed in order to research duplication of this item in Journey mode. See https://terraria.gamepedia.com/Journey_Mode/Research_list for a list of commonly used research amounts depending on item type.
 		}
 
@@ -32,6 +32,7 @@ namespace TobinStuff.Items
 			CreateRecipe(5)
 				.AddIngredient(ItemID.Squirrel, 5)
 				.AddIngredient(ItemID.CrystalShard, 5)
+				.AddCondition(Recipe.Condition.TimeDay)
 				.AddTile(TileID.WorkBenches)
 				.Register();
 		}

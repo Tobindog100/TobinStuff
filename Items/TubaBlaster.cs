@@ -14,7 +14,7 @@ namespace TobinStuff.Items
 		public override void SetStaticDefaults()
 		{
 			Tooltip.SetDefault("This is a modded gun.");
-
+			
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
@@ -56,8 +56,9 @@ namespace TobinStuff.Items
 		public override void AddRecipes()
 		{
 			CreateRecipe()
-				//.AddIngredient<ExampleItem>()
-				//.AddTile<Tiles.Furniture.ExampleWorkbench>()
+				.AddIngredient(ItemID.ClockworkAssaultRifle, 1)
+				.AddIngredient<Items.Squirrellium>(7)
+				.AddCondition(Recipe.Condition.TimeDay)
 				.Register();
 		}
 

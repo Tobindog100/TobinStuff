@@ -24,13 +24,13 @@ namespace TobinStuff.Items
 			Item.useTime = 5;
 			Item.useAnimation = 10;
 			Item.useStyle = ItemUseStyleID.Swing;
-			Item.knockBack = 6;
+			Item.knockBack = 1;
 			Item.value = Item.buyPrice(platinum: 990); // Buy this item for one gold - change gold to any coin and change the value to any number <= 100
 			Item.rare = ItemRarityID.Green;
 			Item.UseSound = SoundID.Item1;
 			Item.autoReuse = true;
 
-			Item.pick = 172; // How strong the pickaxe is, see https://terraria.gamepedia.com/Pickaxe_power for a list of common values
+			Item.pick = 120; // How strong the pickaxe is, see https://terraria.gamepedia.com/Pickaxe_power for a list of common values
 		}
 
 		public override void MeleeEffects(Player player, Rectangle hitbox)
@@ -47,6 +47,7 @@ namespace TobinStuff.Items
 			 CreateRecipe()
 				.AddIngredient(ItemID.MoltenPickaxe, 1)
 				.AddIngredient<Items.Squirrellium>(7)
+				.AddCondition(Recipe.Condition.TimeDay)
 				//.AddTile<Tiles.Furniture.Workbench>()
 				.Register(); 
 		}
