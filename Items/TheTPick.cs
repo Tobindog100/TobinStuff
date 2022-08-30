@@ -45,7 +45,8 @@ namespace TobinStuff.Items
 		public override void AddRecipes()
 		{
 			 CreateRecipe()
-				.AddIngredient(ItemID.GemSquirrelAmethyst, 5)
+				.AddIngredient(ItemID.MoltenPickaxe, 1)
+				.AddIngredient<Items.Squirrellium>(7)
 				//.AddTile<Tiles.Furniture.Workbench>()
 				.Register(); 
 		}

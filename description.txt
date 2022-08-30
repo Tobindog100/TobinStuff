@@ -1,5 +1,8 @@
 Tobin's Cool Stuff is a pretty cool mod, it Adds Some Cool Stuff Like:
 1 Magic Sword (A Sword That Deals Magic Damage)
-1 Bat (A Weapon That Does Not Do Much Damge But LAUNCES Enemys)
+1 Staff
+1 Ingot
+1 Blaster
 1 Pickaxe
 And More! (Its In Beta)
+(Todo: Add Boomarang Launcher, Bullet And More)
