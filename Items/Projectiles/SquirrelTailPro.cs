@@ -55,7 +55,7 @@ namespace TobinStuff.Items.Projectiles
 				Projectile.WhipSettings.Segments++;
 
 			// Increase range up to 2x for full charge.
-			Projectile.WhipSettings.RangeMultiplier += 1 / 120f;
+			Projectile.WhipSettings.RangeMultiplier += 2 / 120f;
 
 			// Reset the animation and item timer while charging.
 			owner.itemAnimation = owner.itemAnimationMax;
