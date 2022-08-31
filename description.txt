@@ -4,5 +4,5 @@ Tobin's Cool Stuff is a pretty cool mod, it Adds Some Cool Stuff Like:
 1 Ingot
 1 Blaster
 1 Pickaxe
-And More! (Its In Beta)
-(Todo: Add Boomarang, Bullet And More)
+1 Boomerang
+And More?

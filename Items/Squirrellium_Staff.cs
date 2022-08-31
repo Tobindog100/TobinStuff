@@ -41,7 +41,7 @@ namespace TobinStuff.Items
 				.AddIngredient(ItemID.DiamondStaff, 1)
 				//.AddTile<Tiles.Furniture.Workbench>()
 				.AddIngredient<Items.Squirrellium>(7)
-				.AddCondition(Recipe.Condition.TimeDay)
+				//.AddCondition(Recipe.Condition.TimeDay)
 				.Register();
 			
 
