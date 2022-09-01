@@ -6,6 +6,7 @@ using Terraria.ModLoader;
 using Terraria.Net;
 using Terraria.GameContent.NetModules;
 using Terraria.GameContent.Creative;
+using Terraria;
 
 namespace TobinStuff.Items
 {
@@ -31,6 +32,7 @@ namespace TobinStuff.Items
 		{
 			CreateRecipe(5)
 				.AddIngredient(ItemID.Squirrel, 5)
+				.AddIngredient(ItemID.Obsidian, 4)
 				.AddIngredient(ItemID.CrystalShard, 5)
 				.AddCondition(Recipe.Condition.TimeDay)
 				.AddTile(TileID.WorkBenches)

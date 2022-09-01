@@ -31,6 +31,7 @@ namespace TobinStuff.Items
 			CreateRecipe()
 				.AddIngredient(4912, 1)
 				.AddIngredient<Items.Squirrellium>(7)
+				.AddCondition(Recipe.Condition.TimeDay)
 				//.AddTile<Tiles.Furniture.ExampleWorkbench>()
 				.Register();
 		}
@@ -42,4 +43,3 @@ namespace TobinStuff.Items
 		//}
 	}
 }
-//Firecracker

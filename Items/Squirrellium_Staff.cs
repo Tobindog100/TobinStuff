@@ -1,6 +1,7 @@
 using Terraria.ID;
 using Terraria.GameContent.Creative;
 using Terraria.ModLoader;
+using Terraria;
 
 namespace TobinStuff.Items
 { 
@@ -28,7 +29,7 @@ namespace TobinStuff.Items
 			Item.rare = ItemRarityID.LightRed;
 			Item.UseSound = SoundID.Item71;
 			Item.autoReuse = true;
-			Item.shoot = ProjectileID.DiamondBolt; // Shoots a Diamond Bolt, also known as the projectile shot from Diamond Staff.
+			Item.shoot = ProjectileID.CrystalPulse; // Shoots a Diamond Bolt, also known as the projectile shot from Diamond Staff.
 			Item.shootSpeed = 10; // How fast the item shoots the projectile.
 			Item.crit = 32; // The percent chance at hitting an enemy with a crit, plus the default amount of 4.
 			Item.mana = 10; // This is how much mana the item uses.
@@ -38,10 +39,10 @@ namespace TobinStuff.Items
 		public override void AddRecipes()
 		{
 			CreateRecipe()
-				.AddIngredient(ItemID.DiamondStaff, 1)
+				.AddIngredient(ItemID.CrystalSerpent, 1)
 				//.AddTile<Tiles.Furniture.Workbench>()
 				.AddIngredient<Items.Squirrellium>(7)
-				//.AddCondition(Recipe.Condition.TimeDay)
+				.AddCondition(Recipe.Condition.TimeDay)
 				.Register();
 			
 

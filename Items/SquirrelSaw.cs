@@ -2,6 +2,7 @@ using TobinStuff.Items.Projectiles;
 using Terraria.ID;
 using Terraria.GameContent.Creative;
 using Terraria.ModLoader;
+using Terraria;
 
 namespace TobinStuff.Items
 {
@@ -47,7 +48,7 @@ namespace TobinStuff.Items
 			CreateRecipe()
 				.AddIngredient(ItemID.Flamarang, 5)
 				.AddIngredient<Items.Squirrellium>(7)
-				//.AddCondition(Recipe.Condition.TimeDay)
+				.AddCondition(Recipe.Condition.TimeDay)
 				.AddTile(TileID.WorkBenches)
 				.Register();
 		}

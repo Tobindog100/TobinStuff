@@ -36,6 +36,8 @@ namespace TobinStuff.Items
 			CreateRecipe()
 				//.AddIngredient<Items.Weapons.ExampleSword>()
 				.AddIngredient<Items.Squirrellium>(7)
+				.AddCondition(Recipe.Condition.TimeDay)
+				.AddIngredient(ItemID.PurplePhaseblade, 5)
 //				.AddIngredient(this, "Squirrellium");
 				.Register();
 		}
