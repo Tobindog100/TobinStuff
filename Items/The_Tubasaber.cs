@@ -16,8 +16,8 @@ namespace TobinStuff.Items
 		{
 			Item.damage = 50;
 			Item.DamageType = DamageClass.Magic;
-			Item.width = 40;
-			Item.height = 40;
+			Item.width = 10; //40
+			Item.height = 100; //40
 			Item.useTime = 20;
 			Item.useAnimation = 20;
 			Item.useStyle = 1;
@@ -26,6 +26,8 @@ namespace TobinStuff.Items
 			Item.rare = 2;
 			Item.UseSound = SoundID.Item1;
 			Item.autoReuse = true;
+			Item.scale = 3f;
+			Item.ArmorPenetration = 10;
 		}
 
 				// still in your item

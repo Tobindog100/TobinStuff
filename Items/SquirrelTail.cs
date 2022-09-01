@@ -29,7 +29,8 @@ namespace TobinStuff.Items
 		public override void AddRecipes()
 		{
 			CreateRecipe()
-				//.AddIngredient<ExampleItem>()
+				.AddIngredient(4912, 1)
+				.AddIngredient<Items.Squirrellium>(7)
 				//.AddTile<Tiles.Furniture.ExampleWorkbench>()
 				.Register();
 		}
@@ -41,3 +42,4 @@ namespace TobinStuff.Items
 		//}
 	}
 }
+//Firecracker

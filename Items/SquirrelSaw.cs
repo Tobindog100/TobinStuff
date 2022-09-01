@@ -45,7 +45,9 @@ namespace TobinStuff.Items
 		public override void AddRecipes()
 		{
 			CreateRecipe()
-				//.AddIngredient<Items.Dirt>()
+				.AddIngredient(ItemID.Flamarang, 5)
+				.AddIngredient<Items.Squirrellium>(7)
+				//.AddCondition(Recipe.Condition.TimeDay)
 				.AddTile(TileID.WorkBenches)
 				.Register();
 		}
