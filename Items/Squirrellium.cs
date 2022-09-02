@@ -35,7 +35,7 @@ namespace TobinStuff.Items
 				.AddIngredient(ItemID.Obsidian, 4)
 				.AddIngredient(ItemID.CrystalShard, 5)
 				.AddCondition(Recipe.Condition.TimeDay)
-				.AddTile(TileID.WorkBenches)
+				.AddTile(TileID.Hellforge)
 				.Register();
 		}
 

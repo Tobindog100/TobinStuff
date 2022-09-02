@@ -38,8 +38,8 @@ namespace TobinStuff.Items
 			// While we're at it, let's make our weapon's stats a bit stronger than the Meowmere, which can be done
 			// by using math on each given stat.
 
-			Item.damage /= 2; // Makes this weapon's damage double the Meowmere's damage.
-			Item.shootSpeed *= 1.25f; // Makes this weapon's projectiles shoot 25% faster than the Meowmere's projectiles.
+			Item.damage /= 4; // Makes this weapon's damage double the Meowmere's damage.
+			Item.shootSpeed *= 1.10f; // Makes this weapon's projectiles shoot 25% faster than the Meowmere's projectiles.
 		}
 
 		// Please see Content/ExampleRecipes.cs for a detailed explanation of recipe creation.
@@ -49,7 +49,7 @@ namespace TobinStuff.Items
 				.AddIngredient(ItemID.Flamarang, 5)
 				.AddIngredient<Items.Squirrellium>(7)
 				.AddCondition(Recipe.Condition.TimeDay)
-				.AddTile(TileID.WorkBenches)
+				.AddTile(TileID.Anvils)
 				.Register();
 		}
 	}

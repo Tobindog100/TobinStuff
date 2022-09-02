@@ -5,12 +5,13 @@ using Terraria;
 
 namespace TobinStuff.Items
 { 
-	public class Squirrellium_Staff : ModItem
+	public class SquirrelliumStaff : ModItem
+	
 	{
 		public override void SetStaticDefaults()
 		{
 			Tooltip.SetDefault("This is an example magic weapon");
-
+			DisplayName.SetDefault("Squirrellium Staff");
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
@@ -43,6 +44,7 @@ namespace TobinStuff.Items
 				//.AddTile<Tiles.Furniture.Workbench>()
 				.AddIngredient<Items.Squirrellium>(7)
 				.AddCondition(Recipe.Condition.TimeDay)
+				.AddTile(TileID.Anvils)
 				.Register();
 			
 

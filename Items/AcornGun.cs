@@ -9,11 +9,11 @@ using Terraria.ModLoader;
 
 namespace TobinStuff.Items
 {
-	public class TubaBlaster : ModItem
+	public class AcornGun : ModItem
 	{
 		public override void SetStaticDefaults()
 		{
-			Tooltip.SetDefault("This is a modded gun.");
+			Tooltip.SetDefault("For wide area blasting");
 			
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
@@ -23,7 +23,7 @@ namespace TobinStuff.Items
 			// Common Properties
 			Item.width = 62; // Hitbox width of the item.
 			Item.height = 32; // Hitbox height of the item.
-			Item.scale = 0.75f;
+			Item.scale = 1f;
 			Item.rare = ItemRarityID.Green; // The color that the item's name will be in-game.
 
 			// Use Properties
@@ -48,7 +48,7 @@ namespace TobinStuff.Items
 
 			// Gun Properties
 			Item.shoot = ProjectileID.PurificationPowder; // For some reason, all the guns in the vanilla source have this.
-			Item.shootSpeed = 16f; // The speed of the projectile (measured in pixels per frame.)
+			Item.shootSpeed = 64f; // The speed of the projectile (measured in pixels per frame.)
 			Item.useAmmo = AmmoID.Bullet; // The "ammo Id" of the ammo item that this weapon uses. Ammo IDs are magic numbers that usually correspond to the item id of one item that most commonly represent the ammo type.
 		}
 
@@ -59,6 +59,7 @@ namespace TobinStuff.Items
 				.AddIngredient(ItemID.ClockworkAssaultRifle, 1)
 				.AddIngredient<Items.Squirrellium>(7)
 				.AddCondition(Recipe.Condition.TimeDay)
+				.AddTile(TileID.Anvils)
 				.Register();
 		}
 
@@ -94,8 +95,8 @@ namespace TobinStuff.Items
 		// Even Arc style: Multiple Projectile, Even Spread
 		public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback) {
 			float numberProjectiles = 3 + Main.rand.Next(3); // 3, 4, or 5 shots
-			float rotation = MathHelper.ToRadians(45);
-			position += Vector2.Normalize(velocity) * 45f;
+			float rotation = MathHelper.ToRadians(20);
+			position += Vector2.Normalize(velocity) * 20f;
 			for (int i = 0; i < numberProjectiles; i++) {
 				Vector2 perturbedSpeed = velocity.RotatedBy(MathHelper.Lerp(-rotation, rotation, i / (numberProjectiles - 1))) * .2f; // Watch out for dividing by 0 if there is only 1 projectile.
 				Projectile.NewProjectile(source, position, perturbedSpeed, type, damage, knockback, player.whoAmI);

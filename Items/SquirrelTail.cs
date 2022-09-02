@@ -21,7 +21,7 @@ namespace TobinStuff.Items
 
 			Item.shootSpeed = 4;
 			Item.rare = ItemRarityID.Green;
-
+			Item.crit = 32;
 			Item.channel = true;
 		}
 
@@ -32,7 +32,7 @@ namespace TobinStuff.Items
 				.AddIngredient(4912, 1)
 				.AddIngredient<Items.Squirrellium>(7)
 				.AddCondition(Recipe.Condition.TimeDay)
-				//.AddTile<Tiles.Furniture.ExampleWorkbench>()
+				.AddTile(TileID.Anvils)
 				.Register();
 		}
 

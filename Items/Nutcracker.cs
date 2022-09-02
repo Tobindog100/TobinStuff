@@ -6,18 +6,18 @@ using Terraria.ModLoader;
 
 namespace TobinStuff.Items
 {
-	public class TheTPick : ModItem
+	public class Nutcracker : ModItem
 	{
 		public override void SetStaticDefaults()
 		{
-			Tooltip.SetDefault("This is a modded pickaxe.");
+			Tooltip.SetDefault("Cracks nuts.... And dirt.... And stone.");
 
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
 		{
-			Item.damage = 1;
+			Item.damage = 5;
 			Item.DamageType = DamageClass.Melee;
 			Item.width = 40;
 			Item.height = 40;
@@ -48,7 +48,7 @@ namespace TobinStuff.Items
 				.AddIngredient(ItemID.MoltenPickaxe, 1)
 				.AddIngredient<Items.Squirrellium>(7)
 				.AddCondition(Recipe.Condition.TimeDay)
-				//.AddTile<Tiles.Furniture.Workbench>()
+				.AddTile(TileID.Anvils)
 				.Register(); 
 		}
 	}
